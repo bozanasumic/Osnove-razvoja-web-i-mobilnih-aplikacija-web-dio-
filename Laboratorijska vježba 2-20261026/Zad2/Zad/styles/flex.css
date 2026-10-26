@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #4abdac;
+    color: #dfdce3;
+}
+
+header {
+    margin: 10px;
+    padding: 5px;
+    /*ovaj padding povećava kutiju za 10px po visini*/
+    height: 90px;
+    /*Ukupna visina kutije je 100px*/
+    background-color: #fc4a1a;
+    border-radius: 10px;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+}
+
+header h1 {
+    height: 100%;
+    text-align: center;
+    font-size: 2em;
+    line-height: 2.8125em;
+    /*Visina 90px / 2 em => 2.8125em*/
+}
+
+nav {
+    margin: 10px;
+    padding: 5px;
+    height: 70px;
+    background-color: #f78733;
+    border-radius: 10px;
+}
+
+nav ul {
+    height: 100%;
+    border-radius: 10px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+    height: 100%;
+    width: 120px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    line-height: 2.916em;
+    /*Visina 70px / 1.5em => 2.916em*/
+    border-radius: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #dfdce3;
+    color: #f78733;
+}
+
+
+
+main {
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+main article, main aside {
+    background-color: #f78733;
+    padding: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+main article {
+    width: calc(100% - 320px); /*75%-10px*/
+}
+
+main aside {
+    width: 310px; /*25%-10px*/
+}
+
+main article:nth-child(3) {
+    order: 1;
+}
+
+main aside:nth-child(1) {
+    order: 2;
+}
+
+main article:nth-child(4) {
+    order: 3;
+}
+
+main aside:nth-child(2) {
+    order: 4;
+}
+
+
+
+footer {
+    background-color: #fc4a1a;
+    margin: 10px;
+    padding: 5px;
+    height: 90px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    width: auto;
+    height: auto;
+    text-align: center;
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+footer ul li a {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+footer ul li a:hover {
+    opacity: 0.5;
+}
+
+footer p {
+    text-align: left;
+}
